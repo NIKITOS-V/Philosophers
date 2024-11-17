@@ -88,8 +88,6 @@ public class Philosopher implements Runnable{
             }
             think();
         }
-
-        changeStatus(Status.full);
     }
 
     @Override
