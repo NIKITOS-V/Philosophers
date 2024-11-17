@@ -16,7 +16,7 @@ public class Philosopher implements Runnable{
     private int currentNumberMeal;
     private final long ID;
     private Status status;
-    private boolean thought = true;
+    private boolean thought;
 
     public Philosopher(Fork leftFork, Fork rightFork, Logger logger){
         this.logger = logger;
@@ -26,6 +26,8 @@ public class Philosopher implements Runnable{
 
         this.currentNumberMeal = 0;
         this.ID = lastID++;
+
+        this.thought = true;
     }
 
     private void eat(){
